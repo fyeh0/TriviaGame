@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Trivia Game</title>
-    <link rel="reset" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
@@ -16,48 +15,49 @@
         <div class="main-content">
             <h1>Chicken Trivia</h1>
             <h2>Test your knowledge of chickens!</h2>
+            <div id="timer">00:00</div>
             <input id="start-game" type="submit" value="Start!"></button>
 
-            <form>
+
+            <form id="quiz">
                 <label>
                     <p>What is <u>not</u> an egg shell color?</p>
-                    <input id="red" name="question1" type="radio"> Red
-                    <input id="black" name="question1" type="radio"> Black
-                    <input id="green" name="question1" type="radio"> Green
-                    <input id="blue" name="question1" type="radio"> Blue
+                    <input id="red" name="question1" type="radio" value="red"> Red
+                    <input id="black" name="question1" type="radio" value="black"> Black
+                    <input id="green" name="question1" type="radio" value="green"> Green
+                    <input id="blue" name="question1" type="radio" value="blue"> Blue
                 </label>
 
                 <label>
                     <p>How do you know what color shell an egg will be?</p>
-                    <input id="feather color" name="question2" type="radio"> Feather color
-                    <input id="diet" name="question2" type="radio"> Diet
-                    <input id="ear lobes" name="question2" type="radio"> Ear lobes
-                    <input id="age" name="question2" type="radio"> Age
+                    <input id="feather-color" name="question2" type="radio" value="feather-color"> Feather color
+                    <input id="diet" name="question2" type="radio" value="diet"> Diet
+                    <input id="ear-lobes" name="question2" type="radio" value="ear-lobes"> Ear lobes
+                    <input id="age" name="question2" type="radio" value="age"> Age
                 </label>
 
                 <label>
                     <p>What was the original purpose of domesticating and breeding chickens?</p>
-                    <input id="cockfighting" name="question3" type="radio"> Cockfighting
-                    <input id="household-pets" name="question3" type="radio"> Household pets
-                    <input id="alarm-clocks" name="question3" type="radio"> Circadian alarm clocks
-                    <input id="eggs" name="question3" type="radio"> Eggs
+                    <input id="cockfighting" name="question3" type="radio" value="cockfighting"> Cockfighting
+                    <input id="household-pets" name="question3" type="radio" value="household-pets"> Household pets
+                    <input id="alarm-clocks" name="question3" type="radio" value="circadian-alarm-clocks"> Circadian alarm clocks
+                    <input id="eggs" name="question3" type="radio" value="eggs"> Eggs
                 </label>
 
                 <label>
                     <p>What is the record of most laid eggs by a single chicken in a day?</p>
-                    <input id="twelve" name="question4" type="radio"> 12
-                    <input id="three" name="question4" type="radio"> 3
-                    <input id="twenty-one" name="question4" type="radio"> 21
-                    <input id="seven" name="question4" type="radio"> 7
+                    <input id="three" name="question4" type="radio" value="three"> 3
+                    <input id="seven" name="question4" type="radio" value="seven"> 7
+                    <input id="twelve" name="question4" type="radio" value="twelve"> 12
+                    <input id="twenty-one" name="question4" type="radio" value="twenty-one"> 21
                 </label>
 
                 <label>
-                    <p>How many feathers does the average chicken have?
-                        <input id="two-k" name="question5" type="radio"> 2,000
-                        <input id="four-k" name="question5" type="radio"> 4,000
-                        <input id="six-k" name="question5" type="radio"> 6,000
-                        <input id="eight-k" name="question5" type="radio"> 8,000
-                    </p>
+                    <p>How many feathers does the average chicken have?</p>
+                    <input id="two-k" name="question5" type="radio" value="two-k"> 2,000
+                    <input id="four-k" name="question5" type="radio" value="four-k"> 4,000
+                    <input id="six-k" name="question5" type="radio" value="six-k"> 6,000
+                    <input id="eight-k" name="question5" type="radio" value="eight-k"> 8,000
                 </label>
 
                 <label>

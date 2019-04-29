@@ -14,15 +14,14 @@ window.onload = function () {
 }
 
 var correctAnswers = ["red", "ear-lobes", "cockfighting", "seven", "eight-k"];
-var userGuesses = [$("input[name=question1]:checked").val(), $("input[name=question2]:checked").val(), $("input[name=question3]:checked").val(), $("input[name=question4]:checked").val(), $("input[name=question5]:checked").val(), $("input[name=question6]:checked").val()];
 let correct = 0;
 let wrong = 0;
-var time = 90;
+var time = 60;
 var intervalID;
-//console.log($("input[name=question1]:checked"));
 
 
 function checkAnswers() {
+    var userGuesses = [$("input[name=question1]:checked").val(), $("input[name=question2]:checked").val(), $("input[name=question3]:checked").val(), $("input[name=question4]:checked").val(), $("input[name=question5]:checked").val()];
     for (let i = 0; i < userGuesses.length; i++) {
         if (userGuesses[i] === correctAnswers[i]) {
             correct++;
@@ -35,34 +34,36 @@ function checkAnswers() {
     } else {
         console.log("Not so egg-cellent...");
     }
-    console.log("You got " + correct, "-", wrong);
+    console.log("You got " + correct + " right and " + wrong + " wrong.");
 }
 
-function results() {
+// function results() {
 
-}
+// }
 
 function start() {
-    // var intervalId = setInterval(count, 1000);
     $("#quiz").show();
-    clearInterval(intervalID);
+    // clearInterval(intervalID);
     intervalID = setInterval(countdown, 1000);
 }
 
 function countdown() {
     time--;
-    $("#timer").html(time);
+    $("#timer").html("00:" + time);
     if (time === 0) {
+        clearInterval(intervalID);
         finish();
         alert("Time's up!");
     }
 }
 
 function finish() {
-    clearInterval(intervalID);
+
 }
 
 
 
-
+// timer still runs after finish button is clicked
+// display results when finish is clicked
+// pretty up css
 

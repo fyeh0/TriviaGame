@@ -12,3 +12,8 @@ html {
     text-align: center;
     opacity: 0.85;
 }
+
+#timer {
+    font-size: 22px;
+    padding: 15px;
+}

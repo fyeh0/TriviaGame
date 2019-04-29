@@ -6,10 +6,12 @@ $("#start-game").click(function () {
 $("#finish-game").click(function () {
     console.log("Finish game");
     finish();
+    $("#quiz").hide(); 
     checkAnswers();
 })
 
 window.onload = function () {
+    finish();
     $("#quiz").hide();
 }
 
@@ -17,7 +19,7 @@ var correctAnswers = ["red", "ear-lobes", "cockfighting", "seven", "eight-k"];
 let correct = 0;
 let wrong = 0;
 var time = 60;
-var intervalID;
+var intervalID = setInterval(countdown, 1000);
 
 
 function checkAnswers() {
@@ -43,22 +45,21 @@ function checkAnswers() {
 
 function start() {
     $("#quiz").show();
-    // clearInterval(intervalID);
     intervalID = setInterval(countdown, 1000);
+    //clearInterval(intervalID);
 }
 
 function countdown() {
     time--;
     $("#timer").html("00:" + time);
     if (time === 0) {
-        clearInterval(intervalID);
         finish();
         alert("Time's up!");
     }
 }
 
 function finish() {
-
+    clearInterval(intervalID);
 }
 
 

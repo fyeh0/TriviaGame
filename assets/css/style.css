@@ -1,11 +1,12 @@
 body {
-    background-image: url("assets/images/chickensR4ever.jpg");
+    background-image: url("/assets/images/chickensR4ever.jpg");
 }
 
 .main-container {
     background: #f5eded;
-    width: 980px;
+    width: 900px;
     padding: 30px;
+    margin-top: 30px;
     margin-right: auto;
     margin-left: auto;
     top: 0px;

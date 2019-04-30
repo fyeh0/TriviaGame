@@ -17,3 +17,22 @@ html {
     font-size: 22px;
     padding: 15px;
 }
+
+form,
+#results {
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+line-height: 0;
+padding-top: 15px;
+}
+
+#results {
+    padding: 20px;
+}
+
+#finish-game {
+    margin-top: 15px;
+}

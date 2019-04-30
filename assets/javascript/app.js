@@ -1,6 +1,7 @@
 $("#start-game").click(function () {
     console.log("Start game");
     start();
+    $("#results").hide();
 })
 
 $("#finish-game").click(function () {
@@ -8,6 +9,7 @@ $("#finish-game").click(function () {
     finish();
     $("#quiz").hide(); 
     checkAnswers();
+    $("#results").show();
 })
 
 window.onload = function () {
@@ -32,21 +34,19 @@ function checkAnswers() {
         }
     }
     if (correct >= 3) {
+        $("#results").text("Egg-cellent job!");
         console.log("Egg-cellent job!");
     } else {
+        $("#results").text("Not so egg-cellent...");
         console.log("Not so egg-cellent...");
     }
+    $("#results").append("You got " + correct + " right and " + wrong + " wrong.");
     console.log("You got " + correct + " right and " + wrong + " wrong.");
 }
-
-// function results() {
-
-// }
 
 function start() {
     $("#quiz").show();
     intervalID = setInterval(countdown, 1000);
-    //clearInterval(intervalID);
 }
 
 function countdown() {
@@ -61,10 +61,4 @@ function countdown() {
 function finish() {
     clearInterval(intervalID);
 }
-
-
-
-// timer still runs after finish button is clicked
-// display results when finish is clicked
-// pretty up css
 
